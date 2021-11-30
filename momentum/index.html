@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body>
+  <header class="header">
+    <div class="player">
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
+      </div>
+      <div class="player-modified">
+        <div class="audio-name">[Player not active]</div>
+        <input  value="0" type="range" class="audio-progress" min="0" max="100" step="1" style="background: linear-gradient(to right,rgba(255, 255, 255, 1)  0%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);">
+        <span class="current-time"></span>
+        <span class="duration"></span>
+        <div class="sound-container">
+          <button class="sound"></button>
+          <input value="50" type="range" class="sound-progress" min="0" max="100" step="1" style="background: linear-gradient(to right,rgba(255, 255, 255, 1)  0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 100%);">
+        </div>
+      </div>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="weather">
+      <input type="text" class="city" placeholder="[Enter city]"/>
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date"></date>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input type="text" class="name" placeholder="[Enter name]" />
+    </div>
+    <div class="todo">
+      <div style="display: flex; margin-bottom: 10px;">
+        <input type="text" placeholder="[Enter task]" class="todo-input" maxlength="20">
+        <div class="todo-add">+</div>
+      </div>
+      <div class="task-list"></div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="quotes">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>
+    <button class="settings-btn"></button>
+    <div class="settings">
+      <h1 class="sett-lang">Language</h1>
+      <div class="lang-container">
+        <div class="lang active">EN</div>
+        <div class="lang">RU</div>
+      </div>
+      <h1 class="sett-img">Picture sources</h1>
+      <div class="img-container">
+        <div class="img-source-ul">
+          <div class="img-source active">Github</div>
+          <div class="img-source">Flickr</div>
+          <div class="img-source">Unsplash</div>
+        </div>
+        <div class="tags-frame">
+          <div class="tags-container">
+            <div class="unsplash-tags">
+              <div class="tag" id="nature">nature</div>
+              <div class="tag" id="city">city</div>
+              <div class="tag" id="modern">modern</div>
+            </div>
+            <div class="flickr-tags">
+              <div class="tag active" id="day">day</div>
+              <div class="tag" id="night">night</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="sett-hide">Hide elements</h1>
+      <div class="hide-container">
+        <ul class="hide-ul">
+          <li id="time">Time</li>
+          <li id="date">Date</li>
+          <li id="greeting-container">Greeting</li>
+          <li id="quotes">Quotes</li>
+          <li id="weather">Weather</li>
+          <li id="player">Audio</li>
+          <li id="todo">Todo List</li>
+        </ul>
+      </div>
+    </div>
+    <div class="links">
+      <a class="rsschool" href="https://rs.school/js/" target="_blink"></a>
+      <div>2021</div>
+      <a class="github" href="https://github.com/AvlasenkoPetr" target="_blink"></a>
+    </div>
+  </footer>
+  <script src="./js/settings.js"></script>
+  <script src="./js/todo-list.js"></script>
+  <script src="./js/player.js" type="module"></script>
+  <script src="./js/player-modified.js"></script>
+  <script src="./js/quotes.js"></script>
+  <script src="./js/weather.js"></script>
+  <script src="./js/greeting.js"></script>
+  <script src="./js/background.js"></script>
+  <script src="./js/time-and-date.js"></script>
+</body>
+</html>
